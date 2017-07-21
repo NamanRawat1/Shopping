@@ -2,6 +2,7 @@ package com.example.intents.shopping.infrastructure;
 
 import android.app.Application;
 import com.squareup.otto.Bus;
+import com.firebase.client.Firebase;
 
 public class shoppingapplicaion extends Application {
 
@@ -14,6 +15,7 @@ public class shoppingapplicaion extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Firebase.setAndroidContext(this);
     }
    public  Bus getBus(){
        return bus;
